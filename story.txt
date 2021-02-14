@@ -1,0 +1,78 @@
+A long time ago, in a galaxy far, far away. Universal truths are constant..
+
+
+
+
+
+
+
+
+
+
+modifications
+
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git add story.txt
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git commit story.txt
+[master (root-commit) 1567038] Initial commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 story.txt
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git log
+commit 15670386c2f4e13400a5d459cd6281be3155fa83 (HEAD -> master)
+Author: Zongle Huang <z500h355@ku.edu>
+Date:   Sun Feb 7 12:23:10 2021 -0600
+
+    Initial commit
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git status
+On branch master
+nothing to commit, working tree clean
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git branch
+* master
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git branch solo
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git checkout solo
+Switched to branch 'solo'
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git commit -m "Finial commit"
+On branch solo
+Changes not staged for commit:
+	modified:   story.txt
+
+no changes added to commit
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git checkout solo
+M	story.txt
+Already on 'solo'
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git commit story.txt
+[solo 826aba9] Finial commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git log
+commit 826aba9c0c4625137cfba71d8531ab5edfbb8dd6 (HEAD -> solo)
+Author: Zongle Huang <z500h355@ku.edu>
+Date:   Sun Feb 7 12:31:41 2021 -0600
+
+    Finial commit
+
+commit 15670386c2f4e13400a5d459cd6281be3155fa83 (master)
+Author: Zongle Huang <z500h355@ku.edu>
+Date:   Sun Feb 7 12:23:10 2021 -0600
+
+    Initial commit
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git checkout master
+Switched to branch 'master'
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git log
+commit 15670386c2f4e13400a5d459cd6281be3155fa83 (HEAD -> master)
+Author: Zongle Huang <z500h355@ku.edu>
+Date:   Sun Feb 7 12:23:10 2021 -0600
+
+    Initial commit
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git status
+On branch master
+nothing to commit, working tree clean
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git diff
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git checkout master
+Already on 'master'
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$ git merge solo
+Updating 1567038..826aba9
+Fast-forward
+ story.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+z500h355@E3002-13:~/Desktop/Lab01/repo-name-here$
+
+
